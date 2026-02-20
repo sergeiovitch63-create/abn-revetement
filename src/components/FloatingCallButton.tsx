@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { site } from "../config/site";
+import { site } from "@/config/site";
 import { Icon } from "./icons";
 
 export function FloatingCallButton() {
