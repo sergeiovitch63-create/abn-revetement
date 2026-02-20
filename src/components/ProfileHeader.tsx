@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getQuickActions, site } from "../config/site";
+import { getQuickActions, site } from "@/config/site";
 import { Icon } from "./icons";
 
 const AVATAR_SIZE = 80;

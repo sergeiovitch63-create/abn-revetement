@@ -1,4 +1,4 @@
-import type { IconKey } from "../config/site";
+import type { IconKey } from "@/config/site";
 
 interface IconProps {
   name: IconKey;

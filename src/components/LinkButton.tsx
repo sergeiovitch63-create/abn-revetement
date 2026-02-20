@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { MouseEventHandler } from "react";
-import type { SiteLink } from "../config/site";
+import type { SiteLink } from "@/config/site";
 import { Icon } from "./icons";
 
 interface LinkButtonProps {

@@ -1,3 +1,27 @@
+export type LinkType = "internal" | "external" | "action";
+
+export type IconKey =
+  | "phone"
+  | "whatsapp"
+  | "facebook"
+  | "email"
+  | "map"
+  | "paint"
+  | "ceiling"
+  | "layers"
+  | "walls"
+  | "info"
+  | "stars";
+
+export interface SiteLink {
+  id: string;
+  title: string;
+  href: string;
+  type: LinkType;
+  iconKey?: IconKey;
+  thumbnail?: string;
+}
+
 export interface SiteSeoConfig {
   title: string;
   description: string;
@@ -19,6 +43,17 @@ export interface SiteConfig {
   googleMapsUrl: string;
   seo: SiteSeoConfig;
   og: SiteOgConfig;
+  links: SiteLink[];
+}
+
+export type QuickActionId = "call" | "whatsapp" | "facebook" | "email";
+
+export interface QuickAction {
+  id: QuickActionId;
+  title: string;
+  href: string;
+  type: LinkType;
+  iconKey: IconKey;
 }
 
 export const site: SiteConfig = {
@@ -39,5 +74,32 @@ export const site: SiteConfig = {
   og: {
     image: "/media/jobs/abn-logo.jpg",
   },
+  links: [],
+};
+
+export const getQuickActions = (): QuickAction[] => {
+  return [
+    {
+      id: "call",
+      title: "Appeler — Devis gratuit",
+      href: site.telLink,
+      type: "action",
+      iconKey: "phone",
+    },
+    {
+      id: "whatsapp",
+      title: "WhatsApp",
+      href: site.waLink,
+      type: "action",
+      iconKey: "whatsapp",
+    },
+    {
+      id: "email",
+      title: "Envoyer un email",
+      href: `mailto:${site.phoneNumber}@example.com`,
+      type: "action",
+      iconKey: "email",
+    },
+  ];
 };
 

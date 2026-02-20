@@ -1,6 +1,6 @@
  "use client";
 
-import { site, type SiteLink } from "../config/site";
+import { site, type SiteLink } from "@/config/site";
 import { trackClick } from "../lib/track";
 import { LinkButton } from "./LinkButton";
 

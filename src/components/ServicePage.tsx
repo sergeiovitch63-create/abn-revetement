@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BackgroundShell } from "./BackgroundShell";
 import { PhoneFrame } from "./PhoneFrame";
-import { site } from "../config/site";
+import { site } from "@/config/site";
 
 interface ServicePageProps {
   title: string;
