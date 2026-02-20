@@ -143,8 +143,23 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
+      type: "website",
       siteName: brand.siteName,
+      images: [
+        {
+          url: preset.defaultBannerImage || preset.defaultBgImage || "/media/jobs/abn-logo.jpg",
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [preset.defaultBannerImage || preset.defaultBgImage || "/media/jobs/abn-logo.jpg"],
+    },
+    metadataBase: new URL("https://abn-revetement.com"),
     alternates: {
       canonical: `/m/${params.job}`,
     },

@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [site.og.image || "/og"],
     },
-    metadataBase: new URL("https://abn-revetement.vercel.app"),
+    metadataBase: new URL("https://abn-revetement.com"),
   };
 }
 
