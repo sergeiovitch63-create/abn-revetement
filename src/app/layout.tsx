@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import localFont from "next/font/local";
 import "./globals.css";
-import { site } from "../config/site";
-import { FloatingCallButton } from "../components/FloatingCallButton";
+import { site } from "@/config/site";
+import { FloatingCallButton } from "@/components/FloatingCallButton";
 import { getBrandFromHost } from "@/lib/brand";
 
 const geistSans = localFont({
@@ -52,9 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [site.og.image || "/og"],
     },
-    metadataBase: isPublink
-      ? new URL("https://publink-teamplates.vercel.app")
-      : new URL("https://lucas-leplaquiste-55q4.vercel.app"),
+    metadataBase: new URL("https://abn-revetement.vercel.app"),
   };
 }
 
