@@ -1,7 +1,7 @@
  "use client";
 
 import { site, type SiteLink } from "@/config/site";
-import { trackClick } from "../lib/track";
+import { trackClick } from "@/lib/track";
 import { LinkButton } from "./LinkButton";
 
 export function LinkList() {
