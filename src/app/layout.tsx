@@ -38,7 +38,6 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       siteName: brand.siteName,
       images: [
-        // Keep Lucas OG image for all, so we don't break existing links
         {
           url: site.og.image || "/og",
           width: 1200,
